@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -74,14 +73,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="header">
-        <span>Gustavo Gomes Macario</span>
+        <h3>Gustavo Gomes Macario</h3>
       </header>
       <div className="container">
         <table id="pTabela" cellspacing="0">
           <thead>
             <th style={{ width: 200 }}>Nome</th>
-            <th style={{ width: 100 }}>Idade</th>
-            <th style={{ width: 100 }}>Cidade</th>
+            <th style={{ width: 150 }}>Idade</th>
+            <th style={{ width: 150 }}>Cidade</th>
             <th style={{ width: 100 }}></th>
           </thead>
           <tbody id="table-content">
@@ -97,8 +96,8 @@ export default function Home() {
                   <span>{item.cidade}</span>
                 </td>
                 <td>
-                  <button onClick={() => excluir(item.id)}>Excluir</button>
-                  <button onClick={() => editar(item.id)}>Alterar</button>
+                  <button className="delete-button" onClick={() => excluir(item.id)}>Excluir</button>
+                  <button className="edit-button" onClick={() => editar(item.id)}>Alterar</button>
                 </td>
               </tr>
             ))}
@@ -135,7 +134,7 @@ export default function Home() {
                 </td>
 
                 <td>
-                  <button onClick={() => salvar()}>Salvar</button>
+                  <button className="save-button" onClick={() => salvar()}>Salvar</button>
                 </td>
               </tr>
             )}
