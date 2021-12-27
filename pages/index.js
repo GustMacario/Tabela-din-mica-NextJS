@@ -76,7 +76,7 @@ export default function Home() {
         <h3>Gustavo Gomes Macario</h3>
       </header>
       <div className="container">
-        <table id="pTabela" cellspacing="0">
+        <table id="pTabela" cellSpacing={0}>
           <thead>
             <th style={{ width: 200 }}>Nome</th>
             <th style={{ width: 150 }}>Idade</th>
